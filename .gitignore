@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+._*
+
+# Project docs (not for web)
+docs/
+photos/
+印刷物/
+会場/
+記録写真/
+リール/
+*.md
+*.pdf
+*.html.bak
+
+# Exclude individual planning files
+ウォークイベントスケジュール.html
+設営当日段取り.html

@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #fafafa;
+  --text: #222;
+  --muted: #666;
+  --line: #ddd;
+  --accent: #444;
+  --max-w: 860px;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+/* ── Layout ── */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: 64px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+/* ── Header ── */
+header {
+  padding: 80px 0 64px;
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.exhibition-title {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+}
+
+.exhibition-title-en {
+  display: block;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  font-weight: 300;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  margin-top: 6px;
+}
+
+.header-meta {
+  margin-top: 28px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+.header-meta span + span::before {
+  content: '　|　';
+}
+
+/* ── Section headings ── */
+.section-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+/* ── About ── */
+.about-text {
+  font-size: 0.95rem;
+  color: var(--text);
+  max-width: 640px;
+}
+
+.about-text p + p {
+  margin-top: 1em;
+}
+
+.about-text .en {
+  color: var(--muted);
+  font-size: 0.875rem;
+  margin-top: 16px;
+}
+
+/* ── Info table ── */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.info-table tr {
+  border-bottom: 1px solid var(--line);
+}
+
+.info-table tr:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.info-table th {
+  width: 120px;
+  padding: 14px 0;
+  font-weight: 400;
+  color: var(--muted);
+  text-align: left;
+  vertical-align: top;
+}
+
+.info-table td {
+  padding: 14px 0;
+  vertical-align: top;
+}
+
+/* ── Works ── */
+.section-heading {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 40px;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.section-heading strong {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text);
+  letter-spacing: 0.06em;
+}
+
+.works-list {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.work-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.work-item.reverse {
+  direction: rtl;
+}
+
+.work-item.reverse > * {
+  direction: ltr;
+}
+
+.work-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  background: var(--line);
+}
+
+.work-info {
+  padding-top: 4px;
+}
+
+.work-number {
+  font-size: 0.7rem;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+.work-title-ja {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.work-title-en {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 2px;
+  font-style: italic;
+}
+
+.work-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 16px;
+  line-height: 1.9;
+}
+
+/* ── Event ── */
+.event-box {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 32px;
+}
+
+.event-title {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  margin-bottom: 20px;
+}
+
+.event-details {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 2;
+}
+
+/* ── Profile ── */
+.profile-name {
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+}
+
+.profile-text {
+  font-size: 0.875rem;
+  color: var(--muted);
+  max-width: 600px;
+  line-height: 2;
+}
+
+/* ── Footer ── */
+footer {
+  padding: 40px 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  section {
+    padding: 48px 0;
+  }
+
+  header {
+    padding: 56px 0 48px;
+  }
+
+  .work-item,
+  .work-item.reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .work-photo {
+    aspect-ratio: 3 / 2;
+  }
+
+  .info-table th {
+    width: 90px;
+  }
+
+  .event-box {
+    padding: 24px;
+  }
+}
