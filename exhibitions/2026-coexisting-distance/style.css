@@ -291,6 +291,24 @@ header {
   }
 }
 
+/* ── Reflection ── */
+.reflection-text {
+  font-size: 0.95rem;
+  max-width: 640px;
+  line-height: 2;
+}
+
+.reflection-heading {
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin-bottom: 28px;
+}
+
+.reflection-text p + p {
+  margin-top: 1.4em;
+}
+
 /* ── Profile ── */
 .profile-name {
   font-size: 1.1rem;
