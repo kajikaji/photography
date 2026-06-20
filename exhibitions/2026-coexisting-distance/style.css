@@ -294,7 +294,6 @@ header {
 /* ── Reflection ── */
 .reflection-text {
   font-size: 0.95rem;
-  max-width: 640px;
   line-height: 2;
   background: #fff;
   border: 1px solid var(--line);
