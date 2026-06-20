@@ -296,17 +296,19 @@ header {
   font-size: 0.95rem;
   max-width: 640px;
   line-height: 2;
-}
-
-.reflection-heading {
-  font-size: 1.1rem;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  margin-bottom: 28px;
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 40px 48px;
 }
 
 .reflection-text p + p {
   margin-top: 1.4em;
+}
+
+@media (max-width: 640px) {
+  .reflection-text {
+    padding: 28px 24px;
+  }
 }
 
 /* ── Profile ── */
