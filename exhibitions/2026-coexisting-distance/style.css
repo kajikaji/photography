@@ -49,6 +49,22 @@ section:last-child {
   border-bottom: none;
 }
 
+/* ── Back nav ── */
+.back-nav {
+  margin-bottom: 32px;
+}
+
+.back-nav a {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.back-nav a:hover {
+  color: var(--text);
+}
+
 /* ── Header ── */
 header {
   padding: 80px 0 64px;
@@ -186,8 +202,7 @@ header {
 
 .work-photo {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  height: auto;
   display: block;
   background: var(--line);
 }
@@ -281,10 +296,6 @@ footer {
   .work-item.reverse {
     grid-template-columns: 1fr;
     direction: ltr;
-  }
-
-  .work-photo {
-    aspect-ratio: 3 / 2;
   }
 
   .info-table th {
